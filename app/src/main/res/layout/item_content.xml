@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:text="+"
+        android:textColor="#500A0A"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/content_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:text="Abderrahmane ARACHE text"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/content_item_delete"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:background="@null"
+        app:backgroundTint="@null"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:rippleColor="@null"
+        app:srcCompat="@drawable/not_validate" />
+
+
+</LinearLayout>

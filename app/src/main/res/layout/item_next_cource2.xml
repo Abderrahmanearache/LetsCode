@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/shadow"
+    android:orientation="vertical"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:contentPadding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/nextcource_linearlayout_new"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/new_mark"
+
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#72009688"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/nextcource_linearlayout_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/course_ic_android"
+                    app:background="@null"
+                    app:backgroundTint="@null"
+                    app:elevation="0dp" />
+
+                <TextView
+                    android:id="@+id/nextcource_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/advent_pro"
+                    android:gravity="right"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="base de java"
+                    android:textColor="#2962FF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:background="#eee"
+                    android:layout_margin="1dp"
+                    android:paddingRight="7dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:padding="7dp">
+
+                        <TextView
+                            android:id="@+id/textViewf4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="verdana"
+                            android:text="Content :"
+                            android:textColor="#303F9F"
+                            android:textSize="15sp" />
+
+                        <TextView
+
+                            android:id="@+id/nextcource_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/andika"
+                            android:text="+ base de java\n+ Itroduction\n+ other content\n+ xample tweeeeel"
+                            android:textColor="#00796B"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/nextcource_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="4"
+                        android:fontFamily="casual"
+                        android:gravity="right|bottom"
+                        android:shadowColor="#7B1FA2"
+                        android:shadowDx="2.0"
+                        android:shadowDy="2.0"
+                        android:shadowRadius="2.0"
+                        android:text="25/06 at 18:25 "
+                        android:textColor="#E64A19"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDECEC"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nextcource_teacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:fontFamily="@font/alegreya_italic"
+                        android:padding="10dp"
+                        android:text="By Shadman c° "
+                        android:textColor="#AA00FF"
+                        android:textSize="14sp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nextcource_signupbutton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:text="@string/nextcource_sign_in"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:textColor="#AA00FF"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

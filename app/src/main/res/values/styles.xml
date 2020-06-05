@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AwsomeProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressBackgroundTint">#AE0A47</item>
+        <item name="android:progressTint">#304FFE</item>
+        <item name="android:secondaryProgressTint">#F6E27C</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:indeterminate">true</item>
+    </style>
+
+    <style name="FacebookLoginButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+
+    </style>
+</resources>

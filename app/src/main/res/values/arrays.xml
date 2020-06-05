@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="indicator_colors">
+        <item>#D50000</item>
+        <item>#00B8D4</item>
+    </string-array>
+    <string-array name="channels">
+
+        <item>Algorithm</item>
+        <item>Android</item>
+        <item>Arduino</item>
+        <item>Asp</item>
+        <item>Cpp</item>
+        <item>Cryptography</item>
+        <item>Data Structure</item>
+        <item>.Net</item>
+        <item>Flutter</item>
+        <item>Language C</item>
+        <item>HTML</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>JQuery</item>
+        <item>Kotlin</item>
+        <item>Language C</item>
+        <item>Laravel</item>
+        <item>Linux</item>
+        <item>MySQL</item>
+        <item>Networking</item>
+        <item>PHP</item>
+        <item>Python</item>
+        <item>Raspberry PI</item>
+        <item>React</item>
+        <item>Spring</item>
+        <item>Swift</item>
+        <item>Symfony</item>
+        <item>XML</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>English</item>
+        <item>Francais</item>
+        <item>العربية</item>
+    </string-array>
+    <string-array name="theme">
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+
+
+</resources>
