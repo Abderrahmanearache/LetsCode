@@ -82,6 +82,7 @@ public class NewCourceFragment extends Fragment {
     }
 
     ArrayList<String> contents;
+    boolean good = false;
 
     private void updateListWidth() {
 
@@ -182,6 +183,7 @@ public class NewCourceFragment extends Fragment {
 
         saveMaterialButton.setOnClickListener(v -> {
 
+
             if (titleTextInputLayout.getEditText().getText().toString().trim().length() < 5) {
                 titleTextInputLayout.setError(getContext().getString(R.string.sixcontentenough));
                 return;
@@ -198,6 +200,11 @@ public class NewCourceFragment extends Fragment {
                 return;
             }
 
+            if (good)
+                return;
+            good = true;
+            saveMaterialButton.setEnabled(false);
+            // pour eviter double click
 
             progressBar.setVisibility(View.VISIBLE);
 
@@ -246,50 +253,6 @@ public class NewCourceFragment extends Fragment {
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-        ProgressDialog progress = ProgressDialog.show(getContext(), null, null, true);
-
-        progress.show();*/
-
-
-        /*
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                Request.Method.GET,
-                Constants.URL_COURCE_GET,
-                null,
-                response -> {
-                    try {
-                        parseJsonAndShowCources(response);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    progress.dismiss();
-                }
-                ,
-                error -> {
-                    progress.dismiss();
-                    error.printStackTrace();
-                }
-        );
-
-        Volley.newRequestQueue(getContext()).add(jsonObjectRequest);
-*/
     }
 
 

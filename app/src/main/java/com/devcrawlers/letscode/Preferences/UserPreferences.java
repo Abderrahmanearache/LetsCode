@@ -18,7 +18,7 @@ public class UserPreferences {
 
     public static User getCurrentUser() {
         if (user == null)
-            readUser();
+            return readUser();
         return user;
     }
 
@@ -33,11 +33,11 @@ public class UserPreferences {
         sharedPrefEditor.apply();
     }
 
-    private static void readUser() {
+    private static User readUser() {
 
         if (context == null) {
             System.err.println("UserPreferences not initialized");
-            return;
+            return null;
         }
 
         SharedPreferences userSharedPreferences = context.getSharedPreferences("USER", Context.MODE_PRIVATE);
@@ -48,6 +48,7 @@ public class UserPreferences {
             user = new Gson().fromJson(userjson, User.class);
         else
             user = null;
+        return user;
 
     }
 

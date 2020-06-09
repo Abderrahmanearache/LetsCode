@@ -39,6 +39,9 @@ public class NextCourceFragment extends Fragment {
 
     @BindView(R.id.next_cource_list)
     RecyclerView recyclerView;
+    @BindView(R.id.next_cource_notfound)
+    TextView notFound;
+
     Adapter recyclerAdapter;
     MyPrefs myPrefs;
 
@@ -108,6 +111,8 @@ public class NextCourceFragment extends Fragment {
                 newCources.add(cours);
 
 
+        if (!newCources.isEmpty())
+            notFound.setVisibility(View.GONE);
         recyclerAdapter = new Adapter(newCources);
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

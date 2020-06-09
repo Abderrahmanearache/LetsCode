@@ -13,6 +13,10 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.devcrawlers.letscode.Preferences.UserPreferences;
 import com.devcrawlers.letscode.fragment.ManageCourceFragment;
+import com.devcrawlers.letscode.fragment.NewCourceFragment;
+import com.devcrawlers.letscode.fragment.NextCourceFragment;
+import com.devcrawlers.letscode.fragment.OldCourcesFragment;
+import com.devcrawlers.letscode.fragment.RequestCourceFragment;
 import com.devcrawlers.letscode.fragment.SettingFragment;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -27,11 +31,6 @@ import com.rbddevs.splashy.Splashy;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-
-import com.devcrawlers.letscode.fragment.NewCourceFragment;
-import com.devcrawlers.letscode.fragment.NextCourceFragment;
-import com.devcrawlers.letscode.fragment.OldCourcesFragment;
-import com.devcrawlers.letscode.fragment.RequestCourceFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -60,6 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         if (UserPreferences.getCurrentUser() == null) {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
+            return;
         }
 
         setSplashy();
@@ -75,6 +75,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     private void prepareDrawer() {
+        System.out.println("user info " + UserPreferences.getCurrentUser());
         String image = UserPreferences.getCurrentUser().getImage();
 
 
@@ -165,7 +166,7 @@ public class HomeActivity extends AppCompatActivity {
             finish();
 
         count = 1;
-       new Thread(() -> {
+        new Thread(() -> {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

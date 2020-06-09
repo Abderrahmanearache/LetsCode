@@ -42,6 +42,7 @@ public class RequestCourceFragment extends Fragment {
     @BindView(R.id.request_list)
     RecyclerView recyclerView;
 
+
     @BindView(R.id.request_floating_add)
     FloatingActionButton floatingActionButton;
 

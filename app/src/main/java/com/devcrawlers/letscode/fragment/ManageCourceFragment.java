@@ -39,6 +39,8 @@ public class ManageCourceFragment extends Fragment {
     @BindView(R.id.next_cource_list)
     RecyclerView recyclerView;
     Adapter recyclerAdapter;
+    @BindView(R.id.next_cource_notfound)
+    TextView notFound;
 
     @Nullable
     @Override
@@ -97,15 +99,18 @@ public class ManageCourceFragment extends Fragment {
 
     private void updateListView(ArrayList<Course> courses) {
 
-        ArrayList<Course> newCources = new ArrayList<>();
+        ArrayList<Course> courceToMnagae = new ArrayList<>();
 
 
         for (Course cours : courses)
             if (cours.isNew() && cours.isWaitingForConfirmation())
-                newCources.add(cours);
+                courceToMnagae.add(cours);
 
 
-        recyclerAdapter = new Adapter(newCources);
+        if (!courceToMnagae.isEmpty())
+            notFound.setVisibility(View.GONE);
+
+        recyclerAdapter = new Adapter(courceToMnagae);
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
     }
