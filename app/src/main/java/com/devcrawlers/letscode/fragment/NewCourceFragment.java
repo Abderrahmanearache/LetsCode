@@ -225,6 +225,11 @@ public class NewCourceFragment extends Fragment {
                                 .setText(R.string.cource_created_succesfully)
                                 .success()
                                 .show();
+                        //redirection
+
+                        getActivity().getSupportFragmentManager().
+                                beginTransaction().replace(R.id.home_fragment_contaner,
+                                new OldCourcesFragment()).commit();
                     }
                     ,
                     error -> {

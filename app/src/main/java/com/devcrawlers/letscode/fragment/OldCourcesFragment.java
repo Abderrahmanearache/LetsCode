@@ -215,6 +215,16 @@ public class OldCourcesFragment extends Fragment {
 
             newCommentSendButton.setOnClickListener(v -> {
                 try {
+                    if (UserPreferences.getCurrentUser().isGuest()) {
+
+                        Snacky.builder().setActivity(getActivity()).setDuration(Snacky.LENGTH_SHORT)
+                                .setText(R.string.guest_permission_denied)
+                                .warning()
+                                .show();
+                        return;
+                    }
+
+
                     createNewFeedback(cource);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -293,9 +303,12 @@ public class OldCourcesFragment extends Fragment {
 
 
         private void collabse() {
+
+
             isExpended = !isExpended;
             constraintLayoutList.setExpanded(isExpended);
             buttonCollabse.setText(isExpended ? R.string.oldcource_hidebutton : R.string.oldcource_showbutton);
+
         }
 
         public void updateListWidth() {

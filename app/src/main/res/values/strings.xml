@@ -48,4 +48,5 @@
     <string name="sign_me">Sign me</string>
     <string name="enrolled">Enrolled</string>
     <string name="click_back_to_exit">Click again to exit.</string>
+    <string name="guest_permission_denied">You must log in first</string>
 </resources>

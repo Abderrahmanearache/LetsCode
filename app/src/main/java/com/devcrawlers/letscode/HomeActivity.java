@@ -52,14 +52,17 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+
+
         UserPreferences.init(this);
+
 
         if (UserPreferences.getCurrentUser() == null) {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         }
 
-        //setSplashy();
+        setSplashy();
 
         setSupportActionBar(toolbar);
 
@@ -82,11 +85,13 @@ public class HomeActivity extends AppCompatActivity {
             } //needs customising view
 
         });
+
+
         ProfileDrawerItem profileDrawerItem = new ProfileDrawerItem()
                 .withEmail(UserPreferences.getCurrentUser().getEmail())
                 .withName(UserPreferences.getCurrentUser().getFullname());
         if (image.isEmpty())
-            profileDrawerItem.withIcon(R.drawable.avatar);
+            profileDrawerItem.withIcon(R.drawable.ic_guest);
         else
             profileDrawerItem.withIcon(image);
 
